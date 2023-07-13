@@ -1,0 +1,55 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.davivienda.com/RSA/SrvScnGeneracionPaqueteDocumentos/v1" xmlns:v11="http://www.davivienda.com/Esquemas/Framework/ContextoSolicitudTipo/v1" xmlns:v12="http://www.davivienda.com/Esquemas/Framework/ServicioTipo/v1" xmlns:v13="http://www.davivienda.com/Esquemas/Framework/OperacionCanalTipo/v1" xmlns:v14="http://www.davivienda.com/Esquemas/Framework/ConsumidorTipo/v1" xmlns:v15="http://www.davivienda.com/Esquemas/Framework/AplicacionTipo/v1" xmlns:v16="http://www.davivienda.com/Esquemas/Framework/CanalTipo/v1" xmlns:v17="http://www.davivienda.com/Esquemas/Framework/TerminalTipo/v1" xmlns:v18="http://www.davivienda.com/Esquemas/Framework/HuellaDigitalDispositivoTipo/v1" xmlns:v19="http://www.davivienda.com/Esquemas/Framework/CriterioOrdenamientoTipo/v1" xmlns:v110="http://www.davivienda.com/Esquemas/Framework/PaginacionTipo/v1">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+			<env:Header/>
+			<S:Body>
+				<ns0:msjSolOpGenerarPaquete xmlns:ns0="http://www.davivienda.com/RSA/SrvScnGeneracionPaqueteDocumentos/v1" xmlns:ns6="http://www.davivienda.com/Esquemas/Framework/ContextoSolicitudTipo/v1" xmlns:ns16="http://www.davivienda.com/Esquemas/Framework/ServicioTipo/v1" xmlns:ns12="http://www.davivienda.com/Esquemas/Framework/OperacionCanalTipo/v1" xmlns:ns3="http://www.davivienda.com/Esquemas/Framework/ConsumidorTipo/v1" xmlns:ns1="http://www.davivienda.com/Esquemas/Framework/AplicacionTipo/v1" xmlns:ns2="http://www.davivienda.com/Esquemas/Framework/CanalTipo/v1" xmlns:ns18="http://www.davivienda.com/Esquemas/Framework/TerminalTipo/v1" xmlns:ns10="http://www.davivienda.com/Esquemas/Framework/HuellaDigitalDispositivoTipo/v1" xmlns:ns7="http://www.davivienda.com/Esquemas/Framework/CriterioOrdenamientoTipo/v1" xmlns:ns13="http://www.davivienda.com/Esquemas/Framework/PaginacionTipo/v1" xmlns:ns5="http://www.davivienda.com/Esquemas/Framework/ContextoRespuestaTipo/v1" xmlns:ns15="http://www.davivienda.com/Esquemas/Framework/ResultadoTransaccionTipo/v1" xmlns:ns9="http://www.davivienda.com/Esquemas/Framework/ErrorTipo/v1">
+					<ns0:contextoSolicitud>
+						<ns6:servicio>
+							<ns16:idServicio>SrvScnGeneracionPaqueteDocumentos</ns16:idServicio>
+						</ns6:servicio>
+						<ns6:operacionCanal>
+							<ns12:idSesion>344ed1e0-472b-11ed-9b2f-29f16c749381</ns12:idSesion>
+							<ns12:idTransaccion>123456789</ns12:idTransaccion>
+							<ns12:fecOperacion>2023-03-27T17:41:16-05:00</ns12:fecOperacion>
+							<ns12:valJornada>0</ns12:valJornada>
+							<ns12:codMoneda>COP</ns12:codMoneda>
+							<ns12:codPais>CO</ns12:codPais>
+							<ns12:codIdioma>ES</ns12:codIdioma>
+						</ns6:operacionCanal>
+						<ns6:consumidor>
+							<ns3:idConsumidor>s</ns3:idConsumidor>
+							<ns3:aplicacion>
+								<ns1:idAplicacion>MBaaS</ns1:idAplicacion>
+							</ns3:aplicacion>
+							<ns3:canal>
+								<ns2:idCanal>37</ns2:idCanal>
+								<ns2:idHost>190.131.196.103</ns2:idHost>
+							</ns3:canal>
+							<ns3:terminal>
+								<ns18:idTerminal>370066</ns18:idTerminal>
+								<ns18:valOrigenPeticion>190.131.196.103</ns18:valOrigenPeticion>
+								<ns18:codUsuario>0</ns18:codUsuario>
+								<ns18:valPerfil>0</ns18:valPerfil>
+							</ns3:terminal>
+						</ns6:consumidor>
+						<ns6:criteriosOrdenamiento/>
+					</ns0:contextoSolicitud>
+					<ns0:paqueteDocId>APERTURA_CUENTA_CREDITO_MOVIL_GMF</ns0:paqueteDocId>
+					<ns0:cliente>
+						<ns0:valTipoIdentificacion>01</ns0:valTipoIdentificacion>
+						<ns0:valNumeroIdentificacion>123456789</ns0:valNumeroIdentificacion>
+						<ns0:valMail>PRUEBA@GMAIL.COM</ns0:valMail>
+					</ns0:cliente>
+					<ns0:listaParametros>
+						${parametros}
+					</ns0:listaParametros>
+					<ns0:enviarCopiaCorreo>false</ns0:enviarCopiaCorreo>
+					<ns0:requiereClave>false</ns0:requiereClave>
+					<ns0:valClaveDocumento>1019140124</ns0:valClaveDocumento>
+				</ns0:msjSolOpGenerarPaquete>
+			</S:Body>
+		</S:Envelope>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,66 @@
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <S:Body>
+      <msjSolOpGenerarDocumentoDesembolso xmlns="http://www.davivienda.com/SrvScnGenerarDocumentoDesembolso/v1" xmlns:ns8="http://www.davivienda.com/Esquemas/Framework/PaginacionTipo/v1" xmlns:ns11="http://www.davivienda.com/Esquemas/Framework/AplicacionTipo/v1" xmlns:ns4="http://www.davivienda.com/Esquemas/Framework/CanalTipo/v1" xmlns:ns5="http://www.davivienda.com/Esquemas/Framework/TerminalTipo/v1" xmlns:ns0="http://www.davivienda.com/Esquemas/Framework/ContextoSolicitudTipo/v1" xmlns:ns9="http://www.davivienda.com/Esquemas/Framework/OperacionCanalTipo/v1" xmlns:ns12="http://www.davivienda.com/Esquemas/Framework/CriterioOrdenamientoTipo/v1" xmlns:ns1="http://www.davivienda.com/Esquemas/Framework/ContextoRespuestaTipo/v1" xmlns:ns3="http://www.davivienda.com/Esquemas/Framework/HuellaDigitalDispositivoTipo/v1" xmlns:ns2="http://www.davivienda.com/Esquemas/Framework/ResultadoTransaccionTipo/v1" xmlns:ns10="http://www.davivienda.com/Esquemas/Framework/ServicioTipo/v1" xmlns:ns6="http://www.davivienda.com/Esquemas/Framework/ConsumidorTipo/v1" xmlns:ns7="http://www.davivienda.com/Esquemas/Framework/ErrorTipo/v1">
+         <contextoSolicitud>
+            <ns0:servicio>
+               <ns10:idServicio>SrvScnGenerarDocumentoDesembolso</ns10:idServicio>
+            </ns0:servicio>
+            <ns0:operacionCanal>
+               <ns9:idSesion>sp3~idYX8zWSgAJsl3fcAhPV4kau</ns9:idSesion>
+               <ns9:idTransaccion>123456789</ns9:idTransaccion>
+               <ns9:fecOperacion>2023-03-06T11:02:08.414-05:00</ns9:fecOperacion> <!--Enviar la fecha hora del momento de consumo del servicio-->
+               <ns9:valJornada>1</ns9:valJornada>
+               <ns9:codMoneda>COP</ns9:codMoneda>
+               <ns9:codPais>CO</ns9:codPais>
+               <ns9:codIdioma>ES</ns9:codIdioma>
+            </ns0:operacionCanal>
+            <ns0:consumidor>
+               <ns6:idConsumidor>TARJETA_MOVIL</ns6:idConsumidor>  <!--Debe ser el mismo que se tenga configurado actualmente para otros flujos, este es un ejemplo-->
+               <ns6:aplicacion>
+                  <ns11:idAplicacion>TARJETA_MOVIL_APP</ns11:idAplicacion>  <!--Debe ser el mismo que se tenga configurado actualmente para otros flujos, este es un ejemplo-->
+               </ns6:aplicacion>
+               <ns6:canal>
+                  <ns4:idCanal>37</ns4:idCanal>
+                  <ns4:idHost>370003</ns4:idHost>
+               </ns6:canal>
+               <ns6:terminal>
+                  <ns5:idTerminal>370003</ns5:idTerminal>
+                  <ns5:valOrigenPeticion>200.122.244.107</ns5:valOrigenPeticion>
+                  <ns5:codUsuario>86003431371</ns5:codUsuario>  <!--Este valor debe ir fijo, ya que es el campo que se compara para descargar el documento del pagaré-->
+                  <ns5:valPerfil>0</ns5:valPerfil>
+               </ns6:terminal>
+            </ns0:consumidor>
+         </contextoSolicitud>
+         <data>
+            <consultarPagare>  <!--Los campos de este contenedor se envían dependiendo del pagaré que se desea descargar de Deceval-->
+               <producto/>
+               <codigoDepositante>
+                  <codigoDepositante>51</codigoDepositante>
+               </codigoDepositante>
+               <consultaPagareService>
+                  <idEstadoPagare>0</idEstadoPagare>
+                  <codigoDeceval>922387</codigoDeceval>
+                  <idTipoIdentificacionFirmante>1</idTipoIdentificacionFirmante>
+                  <numIdentificacionFirmante>906090</numIdentificacionFirmante>
+               </consultaPagareService>
+            </consultarPagare>
+            <generarPaquete>
+               <paqueteDocId>TARJETA_MOVIL_NO_CLIENTES_CON_CC</paqueteDocId>
+               <cliente>
+                  <valTipoIdentificacion>1</valTipoIdentificacion>
+                  <valNumeroIdentificacion>987654321</valNumeroIdentificacion>
+                  <valMail>PRUEBA@GMAIL.COM</valMail>
+               </cliente>
+               <listaParametros>
+				${parametros}
+               </listaParametros>
+               <enviarCopiaCorreo>false</enviarCopiaCorreo>
+               <requiereClave>false</requiereClave>
+            </generarPaquete>
+			<idProcesoBiometria>12d8dc20-dd10-11ec-8d3c-9bcb4e561f70</idProcesoBiometria> <!--Enviar el ID de consulta de las imágenes del documento ID del Cliente-->
+			<idProveedorBiometria>BYTTE</idProveedorBiometria> <!--Se envía los valores BYTTE O NEC dependiendo del proveedor donde se consultan las imágenes de la cédula, el campo es opcional, si no se envía por defecto consulta hacia BYTTE-->
+         </data>
+      </msjSolOpGenerarDocumentoDesembolso>
+   </S:Body>
+</S:Envelope>

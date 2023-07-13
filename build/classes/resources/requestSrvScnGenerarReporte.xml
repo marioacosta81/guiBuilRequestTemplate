@@ -1,0 +1,87 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header/>
+	<soapenv:Body>
+<ns0:msjSolOpGeneracionReporte xmlns:ns0="http://www.davivienda.com/GenerarReporte/SrvScnGeneracionReporte/v1" xmlns:ns1="http://www.davivienda.com/Esquemas/Framework/ContextoSolicitudTipo/v1" xmlns:ns2="http://www.davivienda.com/Esquemas/Framework/ServicioTipo/v1" xmlns:ns3="http://www.davivienda.com/Esquemas/Framework/OperacionCanalTipo/v1" xmlns:ns4="http://www.davivienda.com/Esquemas/Framework/ConsumidorTipo/v1" xmlns:ns5="http://www.davivienda.com/Esquemas/Framework/AplicacionTipo/v1" xmlns:ns6="http://www.davivienda.com/Esquemas/Framework/CanalTipo/v1" xmlns:ns7="http://www.davivienda.com/Esquemas/Framework/TerminalTipo/v1" xmlns:ns8="http://www.davivienda.com/Esquemas/Framework/HuellaDigitalDispositivoTipo/v1" xmlns:ns9="http://www.davivienda.com/Esquemas/Framework/CriterioOrdenamientoTipo/v1" xmlns:ns10="http://www.davivienda.com/Esquemas/Framework/PaginacionTipo/v1">
+   <ns0:contextoSolicitud>
+      <ns1:servicio>
+         <ns2:idServicio>SrvScnGeneracionReporte</ns2:idServicio>
+      </ns1:servicio>
+      <ns1:operacionCanal>
+         <ns3:idSesion>0</ns3:idSesion>
+         <ns3:idTransaccion>0</ns3:idTransaccion>
+         <ns3:fecOperacion>2023-03-25T15:48:21-05:00</ns3:fecOperacion>
+         <ns3:valJornada>1</ns3:valJornada>
+         <ns3:codMoneda>COP</ns3:codMoneda>
+         <ns3:codPais>CO</ns3:codPais>
+         <ns3:codIdioma>ES</ns3:codIdioma>
+      </ns1:operacionCanal>
+      <ns1:consumidor>
+         <ns4:idConsumidor>GNRDR_REP</ns4:idConsumidor>
+         <ns4:aplicacion>
+            <ns5:idAplicacion>SRVEMP_GENERACION_REPORTE</ns5:idAplicacion>
+         </ns4:aplicacion>
+         <ns4:canal>
+            <ns6:idCanal>33</ns6:idCanal>
+            <ns6:idHost>0</ns6:idHost>
+         </ns4:canal>
+         <ns4:terminal>
+            <ns7:idTerminal>2245</ns7:idTerminal>
+            <ns7:valOrigenPeticion> 92.34.12.224</ns7:valOrigenPeticion>
+            <ns7:codUsuario>0</ns7:codUsuario>
+            <ns7:valPerfil>00</ns7:valPerfil>
+         </ns4:terminal>
+      </ns1:consumidor>
+   </ns0:contextoSolicitud>
+   <ns0:cliente>
+      <ns0:tipoIdentificacion>CC</ns0:tipoIdentificacion>
+      <ns0:numeroIdentificacion>987654321</ns0:numeroIdentificacion>
+      <ns0:valMail>pruebaslabdav@gmail.com</ns0:valMail>
+      <ns0:valCCMail></ns0:valCCMail>
+   </ns0:cliente>
+   <ns0:valIdPlantilla>${nombre_plantilla}</ns0:valIdPlantilla>
+   <ns0:valVersionPlantilla>1.0.0</ns0:valVersionPlantilla>
+   <ns0:listaParametros>
+      ${parametros}
+   </ns0:listaParametros>
+   <ns0:listaLlaveFileNet>
+      <ns0:llave>
+         <ns0:nombreLlave>tipoProducto</ns0:nombreLlave>
+         <ns0:valorLlave>Credito Hipotecario UVR</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>productoAsociado</ns0:nombreLlave>
+         <ns0:valorLlave>05703036002779190</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>tipoParteInvolucrada</ns0:nombreLlave>
+         <ns0:valorLlave>Cliente PN</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>sucursal</ns0:nombreLlave>
+         <ns0:valorLlave>MEDELLIN</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>numeroActa</ns0:nombreLlave>
+         <ns0:valorLlave>242</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>usuarioCreacion</ns0:nombreLlave>
+         <ns0:valorLlave>PRSALAZA</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>lineaCredito</ns0:nombreLlave>
+         <ns0:valorLlave>100-CREDITO HIPOTECARIO</ns0:valorLlave>
+      </ns0:llave>
+      <ns0:llave>
+         <ns0:nombreLlave>numeroSolicitud</ns0:nombreLlave>
+         <ns0:valorLlave>10061347</ns0:valorLlave>
+      </ns0:llave>
+   </ns0:listaLlaveFileNet>
+   <ns0:enviarCopiaCorreo>false</ns0:enviarCopiaCorreo>
+   <ns0:requiereClave>false</ns0:requiereClave>
+   <ns0:retornaDocumento>true</ns0:retornaDocumento>
+   <ns0:enviarFileNet>true</ns0:enviarFileNet>
+   <ns0:requiereClaveFileNet>false</ns0:requiereClaveFileNet>
+</ns0:msjSolOpGeneracionReporte>
+	</soapenv:Body>
+</soapenv:Envelope>
